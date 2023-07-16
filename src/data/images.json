@@ -1,0 +1,152 @@
+{
+    "hobbies": [
+      {
+        "id": 1,
+        "path": "little2.jpg",
+        "text" : "Tennis"
+      },
+      {
+        "id": 3,
+        "path": "golf.png",
+        "text" : "Golf"
+      },
+      {
+        "id": 4,
+        "path": "vailme2.jpg",
+        "text" : "Hiking"
+      }
+    ],
+    "friends": [
+      {
+        "id": 5,
+        "path": "kacher.jpg"
+      },
+      {
+        "id": 7,
+        "path": "teamor.jpg"
+      },
+      {
+        "id": 10,
+        "path": "orlando3.jpg"
+      },
+      {
+        "id": 11,
+        "path": "orlando2.jpg"
+      },
+      {
+        "id": 12,
+        "path": "orlando4.jpg"
+      },
+      {
+        "id": 14,
+        "path": "friendsMid.jpg"
+      },
+      {
+        "id": 16,
+        "path": "team.jpg"
+      },
+      {
+        "id": 13,
+        "text": "Indian Well, CA",
+        "path": "teamor2.jpg"
+      },
+      {
+        "id": 18,
+        "path": "vaillake.jpg"
+      }
+      ,
+      {
+        "id": 20,
+        "path": "vail.jpg"
+      },
+      {
+        "id": 28,
+        "path": "peru2.png"
+      },
+      {
+        "id": 6,
+        "text" : "San Francisco, CA",
+        "path": "SFAm.jpg"
+      }
+    ],
+    "places": [
+      {
+        "id": 7,
+        "text": "Taj Mahal, India",
+        "path": "india.jpg"
+      },
+      {
+        "id": 8,
+        "text": "Orlando, FL",
+        "path": "orlando1.jpg"
+      },
+      {
+        "id": 9,
+        "text": "Vail, CO",
+        "path": "alanna.jpg"
+      },
+      {
+        "id": 15,
+        "text" : "Sanpiper, FL",
+        "path": "nike.jpeg"
+      },
+      {
+        "id": 17,
+        "path": "LAIndian.jpg",
+        "text" : "Indian Well, CA"
+      },
+      {
+        "id": 19,
+        "path": "puerto.jpg",
+        "text" : "San Juan, PR"
+
+      },
+      {
+        "id": 21,
+        "path": "SF.jpg",
+        "text" : "San Francisco, CA"
+
+      },
+      {
+        "id": 22,
+        "path": "LA.jpg",
+        "text" : "LA, CA"
+
+      },
+      {
+        "id": 23,
+        "path": "denver.jpg",
+        "text" : "Denver, CO"
+
+      },
+      {
+        "id": 24,
+        "path": "chichen.jpg",
+        "text" : "Chichén Itzá, MX"
+
+      },
+      {
+        "id": 25,
+        "path": "cuba.png",
+        "text" : "La Habana, Cuba"
+
+      },
+      {
+        "id": 26,
+        "path": "puertorico.png",
+        "text": "Bayamon PR"
+      },
+      {
+        "id": 27,
+        "path": "peru.png",
+        "text" : " Peru, Lima"
+
+      },
+      {
+        "id": 29,
+        "path": "chicago.jpg",
+        "text" : "Chicago, IL"
+
+      }
+    ]
+  }

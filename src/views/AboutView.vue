@@ -1,0 +1,129 @@
+<script setup>
+import { ref, onMounted } from "vue";
+import { animateText } from "../utils/TextAnimation"; // Update the path according to your folder structure
+import Scroller from "../components/ScrollerComponent.vue";
+import photos from "../data/images.json";
+
+const text = ref(null);
+// The text is extracted and store it
+const strText = ref(null);
+//Create an array of each individual letter
+let splitText = ref([]);
+
+onMounted(() => {
+  text.value = document.querySelector(".fancy");
+  //String contents
+  strText.value = text.value.textContent;
+  // Array of chacarters
+  splitText.value = strText.value.split("");
+  // reset the text
+  text.value.textContent = "";
+
+  animateText(text.value, strText.value, splitText.value);
+});
+</script>
+
+<template>
+  <div>
+    <section class="block block--dark">
+      <header class="container grid grid">
+        <div class="block__header hero__content">
+          <h1 class="fancy block__heading">Hello Again.</h1>
+        </div>
+        <div class="hero__tagline">
+          <p
+            data-aos="fade-right"
+            data-aos-delay="3000"
+            data-aos-duration="1000"
+          >
+            Here you will get to know me better.
+          </p>
+        </div>
+      </header>
+      <header class="block__header">
+        <h2>Hobbies</h2>
+      </header>
+      <div
+        data-aos="fade-up"
+        data-aos-duration="600"
+        class="media-scroller snaps-inline"
+      >
+        <Scroller
+          v-for="photo in photos.hobbies"
+          :key="photo.id"
+          :photos="photo.path"
+          :text="photo.text"
+        ></Scroller>
+      </div>
+      <!-- <header class="block__header">
+        <h2>Friends & Family</h2>
+      </header>
+      <div
+        data-aos="fade-up"
+        data-aos-duration="600"
+        class="media-scroller snaps-inline"
+      >
+        <Scroller
+          v-for="photo in photos.friends"
+          :key="photo.id"
+          :photos="photo.path"
+        ></Scroller>
+      </div> -->
+      <header class="block__header">
+        <h2>Places</h2>
+      </header>
+      <div
+        style="padding-bottom: 80px"
+        data-aos="fade-up"
+        data-aos-duration="600"
+        class="media-scroller snaps-inline"
+      >
+        <Scroller
+          v-for="photo in photos.places"
+          :key="photo.id"
+          :photos="photo.path"
+          :text="photo.text"
+        ></Scroller>
+      </div>
+    </section>
+  </div>
+</template>
+
+<style scoped lang="scss">
+@import "../assets/scss/scroller";
+@import "../assets/scss/hero";
+@import "../assets/scss/block";
+
+@media screen and (min-width: 768px) {
+  .block__header {
+    margin-top: 90px;
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .block__heading {
+    display: flex;
+    align-content: center;
+    align-self: center;
+    text-align: center;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .block__header {
+    margin-top: 30px;
+    margin-bottom: 4rem;
+  }
+}
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  margin-bottom: 100px;
+  margin-top: 100px;
+}
+
+.my-image {
+  object-position: bottom -450px right 1px;
+}
+</style>

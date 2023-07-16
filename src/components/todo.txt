@@ -1,0 +1,23 @@
+who you are and what you do, while also highlighting your best work and providing easy navigation to the rest of your site. Here are some key elements you might want to include:
+I am a fourth year student athlete persuing a computer science degree at Michigan Tech. 
+
+Work on Mobile screen sizes for all pages 
+
+
+Tagline or brief description: A short, snappy statement that sums up your value proposition and what you do.
+"I am a skilled full-stack software engineer with two years of professional experience. My expertise lies in 
+developing robust backend frameworks using Express, and I have also worked extensively with front-end frameworks 
+like React and Vue. I have hands-on experience in full-stack development using React Native, as well as Java, PHP,
+ and C++. Furthermore, I have worked with various databases such as PostgreSQL, MySQL, and MongoDB to create highly 
+ scalable and efficient applications."
+
+Navigation menu: A menu bar that provides easy access to your portfolio, about page, blog, and contact information.
+
+Featured work: Highlight some of your best work to draw visitors in and encourage them to explore further.
+Add later 
+
+
+
+
+Contact information: Make it easy for potential clients to get in touch with you, whether through a contact form, email address, or social media links.
+add contact information 

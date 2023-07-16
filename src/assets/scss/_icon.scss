@@ -1,0 +1,26 @@
+/* Icons */
+/* Icons in mobiles and desktop need to be the same size, that is why we us px */
+.icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+  }
+  
+  .icon--primary {
+    fill: var(--color-primary);
+  }
+  
+  .icon--white {
+    fill: white;
+  }
+  
+  .icon-container {
+    background: #d2d2d2;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    /* To put the background in the center */
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+  }

@@ -1,0 +1,105 @@
+.nav {
+    background: #000;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 1rem;
+    align-items: center;
+  }
+  
+  .nav__list {
+    width: 100%;
+    margin: 0;
+  }
+  
+  .nav__item {
+    padding: 0.5rem 2rem;
+    /* border-bottom: 1px solid #222; */
+  }
+  
+  .nav__item__active {
+    padding: 0.5rem 2rem;
+    /* border-bottom: 1px solid #222; */
+  }
+  
+  /* Under the hood RouterLink is treated as an anchor */
+  .nav__item > a {
+    color: #d2d0db;
+    transition: color 0.3s;
+  }
+  
+  .nav__item__active > a {
+    color: #ffffff;
+    transition: color 0.3s;
+  }
+  
+  .nav__item__active > a:hover {
+    color: #fff;
+  }
+  
+  .nav__toggler {
+    opacity: 0.5;
+    transition: box-shadow 0.25s;
+    cursor: pointer;
+  }
+  /* If collapsible is expanded, then nav__toggler  */
+  .collapsible--expanded .nav__toggler {
+    opacity: 1;
+    box-shadow: 0 0 0 3px #666;
+    border-radius: 5px;
+  }
+  
+  @media screen and (min-width: 768px) {
+    .nav__toggler {
+      display: none;
+    }
+    /* This will change the visibility on fullscreen */
+    .nav__list {
+      width: auto;
+      display: flex;
+      font-size: 1.6rem;
+      max-height: 100%;
+      opacity: 1;
+    }
+  
+    .nav__item {
+      border: 0;
+    }
+  }
+
+  // @media screen and (max-width: 768px) {
+  //   .nav__item__active::before {
+ 
+  //    display: block;
+  //     width: 400px;
+  //     height: 2px;
+  //     content: "";
+  //     background-color: #f1f1f1;
+  //     transition: transform 0.3s ease;
+  //     transform: scaleX(0);
+  //   }
+  // }
+
+
+  .nav__item__active::before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 2px;
+    content: "";
+    background-color: #f1f1f1;
+    transition: transform 0.3s ease;
+    transform: scaleX(0);
+  }
+  .nav__item__active.animation::before {
+    transform: scaleX(1);
+  }
+  
+  .nav__list__options {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
