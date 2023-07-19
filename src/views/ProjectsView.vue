@@ -29,29 +29,44 @@ onMounted(() => {
             link="https://github.com/Rickynunez123/ArtificialNeuralNetwork-Bank"
             icon="github-icon.svg"
           />
-          <h3>Artificial Neural network</h3>
+          <a
+            href="https://github.com/Rickynunez123/ArtificialNeuralNetwork-Bank"
+            target="_blank"
+            >Artificial Neural network</a
+          >
         </div>
         <div class="text-container">
           <IconComponent
             link="https://github.com/Rickynunez123/ConvolutionalNN-Dogs-Cats"
             icon="github-icon.svg"
           />
-
-          <h3>Convolutional Neural network</h3>
+          <a
+            href="https://github.com/Rickynunez123/ConvolutionalNN-Dogs-Cats"
+            target="_blank"
+            >Convolutional Neural network</a
+          >
         </div>
         <div class="text-container">
           <IconComponent
             link="https://github.com/Rickynunez123/AntipatternDetector"
             icon="github-icon.svg"
           />
-          <h3>Antipatter Detector</h3>
+          <a
+            href="https://github.com/Rickynunez123/AntipatternDetector"
+            target="_blank"
+            >Antipatter Detector</a
+          >
         </div>
         <div class="text-container">
           <IconComponent
             link="https://github.com/Rickynunez123/SchoolPortal"
             icon="github-icon.svg"
           />
-          <h3>School Portal -></h3>
+          <a
+            href="https://github.com/Rickynunez123/SchoolPortal"
+            target="_blank"
+            >School Portal -></a
+          >
           <a
             style="margin-left: 10px"
             :href="`https://vwwbxanexhmfobvhltut.supabase.co/storage/v1/object/public/documents/SchoolPortal.pdf`"
@@ -64,14 +79,20 @@ onMounted(() => {
             link="https://github.com/Rickynunez123/Web-Browser"
             icon="github-icon.svg"
           />
-          <h3>Web Browser</h3>
+          <a href="https://github.com/Rickynunez123/Web-Browser" target="_blank"
+            >Web Browser</a
+          >
         </div>
         <div class="text-container">
           <IconComponent
             link="https://github.com/Rickynunez123/MortgageCalculator"
             icon="github-icon.svg"
           />
-          <h3>Mortgage Calculator</h3>
+          <a
+            href="https://github.com/Rickynunez123/MortgageCalculator"
+            target="_blank"
+            >Mortgage Calculator</a
+          >
         </div>
       </header>
     </section>
@@ -153,17 +174,18 @@ onMounted(() => {
   font-weight: 600;
 }
 a {
-  color: white;
-  margin: 0;
+  color: rgba(222, 210, 210, 0.7294117647);
+  font-size: 21px;
+  font-weight: 600;
 }
 
-h3:hover {
+a:hover {
   color: white;
   font-size: 25px;
   transition: all 0.3s linear;
 }
 
-h3 {
+a {
   margin-bottom: 0;
   transition: font-size 0.3s linear;
 }
