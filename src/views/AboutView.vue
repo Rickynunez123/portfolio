@@ -38,6 +38,22 @@ onMounted(() => {
           >
             Here you will get to know me better.
           </p>
+          <br />
+          <p
+            data-aos="fade-right"
+            data-aos-delay="3000"
+            data-aos-duration="1000"
+          >
+            I began my journey in tennis at the young age of 6. By the time I
+            turned 12, I was already diving into international tournaments.
+            Balancing these commitments with frequent travels made traditional
+            schooling challenging, leading me to embark on homeschooling at the
+            same age. These experiences blessed me with the chance to explore
+            numerous countries and cities, making lifelong friendships across
+            the globe. Eventually, I had the opportunity to join Michigan Tech's
+            college tennis team. Over the past 3 years, I've proudly represented
+            the team.
+          </p>
         </div>
       </header>
       <header class="block__header">

@@ -54,7 +54,7 @@ onMounted(() => {
           <a
             href="https://github.com/Rickynunez123/AntipatternDetector"
             target="_blank"
-            >Antipatter Detector</a
+            >Antipattern Detector</a
           >
         </div>
         <div class="text-container">

@@ -24,6 +24,9 @@ function formatDescription(description) {
 const videos = ref([
   {
     id: 1,
+    isWeb: true,
+    isIPad: false,
+
     title: "File Converter and Presentation Manager",
     link: "manipulator.mp4?t=2023-05-27T19%3A19%3A24.604Z",
     web: "https://github.com/Rickynunez123/FileConverterAndPresentation-FrontEnd",
@@ -34,6 +37,9 @@ const videos = ref([
   },
   {
     id: 2,
+    isWeb: true,
+    isIPad: false,
+
     title: "HealthHub: Your Personal Health Assistant",
     link: "hospitalWeb.mp4?t=2023-05-27T19%3A36%3A19.922Z",
     web: "https://github.com/Rickynunez123/HealthHub",
@@ -44,6 +50,9 @@ const videos = ref([
   },
   {
     id: 3,
+    isWeb: true,
+    isIPad: false,
+
     title: "Smartments",
     link: "airbnb.mp4?t=2023-05-27T19%3A35%3A33.569Z",
     documentation:
@@ -56,11 +65,47 @@ const videos = ref([
   },
   {
     id: 4,
+    isWeb: true,
+    isIPad: false,
+
     title: "Video Game",
     link: "videogame.mp4?t=2023-05-27T19%3A36%3A46.243Z",
     web: 1,
     description:
       "● Technologies (Unity 'Game Engine', Blender '3D modeling', Bolt 'Visual Scripting')<br>",
+  },
+  {
+    id: 6,
+    isIPad: true,
+    title: "Trivia",
+    link: "trivia.mp4?t=2023-08-13T19%3A37%3A26.086Z",
+    web: 1,
+    description:
+      "The user has 60 seconds to get as many right answers as possible and it record the metrics from the game  <br> <br>" +
+      "● Front-end (Vue, Expo, JavaScrips, SCSS, HTML)<br>" +
+      "● Back-end (MySQL, Express, Sockets, Axios)",
+  },
+  {
+    id: 7,
+    isIphone: true,
+    title: "Speed Pitch",
+    link: "speeedpitch.mp4",
+    web: 1,
+    description:
+      "Pitch 3 times, record speeds with a speed gun, and create a leaderboard of fastest pitches with detailed metrics. <br> <br>" +
+      "● Front-end (Vue, JavaScrips, SCSS, HTML)<br>" +
+      "● Back-end (MySQL, Express, Sockets, Axios)",
+  },
+  {
+    id: 5,
+    isWeb: false,
+    title: "Mobile Diffusion",
+    link: "mobileapp.mp4",
+    web: "https://github.com/Rickynunez123/FileConverterAndPresentation-FrontEnd",
+    description:
+      "This app is currently in development and will feature an innovative latent diffusion capability. This unique feature allows you to virtually try on various clothing items before making a purchase decision. <br> <br>" +
+      "● Front-end (React Native, Expo, JavaScrips, CSS, HTML)<br>" +
+      "● Back-end (MongoDB, Express, Axios)",
   },
 ]);
 </script>
@@ -78,7 +123,12 @@ const videos = ref([
         v-for="video in videos"
         :key="video.id"
       >
-        <Laptop :video="video.link" />
+        <Laptop
+          :video="video.link"
+          :isWeb="video.isWeb"
+          :isIpad="video.isIPad"
+          :isIphone="video.isIphone"
+        />
         <div class="info-container">
           <h2>{{ video.title }}</h2>
           <h3 v-html="formatDescription(video.description)"></h3>
@@ -156,6 +206,7 @@ const videos = ref([
   padding: 50px;
   margin-right: 30px;
   border: 5px solid black;
+  margin-bottom: 40px;
 }
 
 .info-container > h2 {

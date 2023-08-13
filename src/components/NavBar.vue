@@ -57,9 +57,13 @@ function onClickCollapsible() {
             </div>
             <div class="nav__list__options">
               <li
-                :class="isActive('/about') ? 'nav__item__active' : 'nav__item'"
+                :class="
+                  isActive('/projects') ? 'nav__item__active' : 'nav__item'
+                "
               >
-                <RouterLink to="/about" @click="handleClick">About</RouterLink>
+                <RouterLink to="/projects" @click="handleClick"
+                  >Projects</RouterLink
+                >
               </li>
             </div>
             <div class="nav__list__options">
@@ -69,19 +73,15 @@ function onClickCollapsible() {
                 "
               >
                 <RouterLink to="/examples" @click="handleClick"
-                  >Examples</RouterLink
+                  >Sample Work Videos</RouterLink
                 >
               </li>
             </div>
             <div class="nav__list__options">
               <li
-                :class="
-                  isActive('/projects') ? 'nav__item__active' : 'nav__item'
-                "
+                :class="isActive('/about') ? 'nav__item__active' : 'nav__item'"
               >
-                <RouterLink to="/projects" @click="handleClick"
-                  >Projects</RouterLink
-                >
+                <RouterLink to="/about" @click="handleClick">About</RouterLink>
               </li>
             </div>
           </ul>
