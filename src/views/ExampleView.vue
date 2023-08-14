@@ -87,12 +87,11 @@ const videos = ref([
   },
   {
     id: 7,
-    isIphone: true,
     title: "Speed Pitch",
-    link: "speeedpitch.mp4",
+    link: "speedpitch.mp4",
     web: 1,
     description:
-      "Pitch 3 times, record speeds with a speed gun, and create a leaderboard of fastest pitches with detailed metrics. <br> <br>" +
+      "speedpitch.mp4 <br> <br>" +
       "● Front-end (Vue, JavaScrips, SCSS, HTML)<br>" +
       "● Back-end (MySQL, Express, Sockets, Axios)",
   },
