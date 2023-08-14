@@ -102,6 +102,11 @@ h3 {
   color: rgb(239, 230, 230);
 }
 
+.icon {
+  width: 40px;
+  height: 40px;
+}
+
 @media screen and (min-width: 768px) {
   /* This will change the visibility on fullscreen */
   .nav__list {

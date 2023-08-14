@@ -55,8 +55,8 @@ const videos = ref([
 
     title: "Smartments",
     link: "airbnb.mp4?t=2023-05-27T19%3A35%3A33.569Z",
-    documentation:
-      "https://vwwbxanexhmfobvhltut.supabase.co/storage/v1/object/public/documents/documentation.pdf",
+    // documentation:
+    //   "https://vwwbxanexhmfobvhltut.supabase.co/storage/v1/object/public/documents/documentation.pdf",
     web: "https://github.com/Rickynunez123/CS3141-R01-team5",
     description:
       "A portal system designed to streamline communication and transactions between landlords and tenants. Landlords can effortlessly set rent prices, efficiently manage maintenance requests, and stay updated on any overdue apartments. Tenants enjoy the convenience of paying their bills online, easily submitting maintenance requests, browsing available apartments, and even requesting specific units. With Smartments, landlords and tenants can enjoy a seamless, efficient, and transparent rental experience. <br> <br>" +
@@ -129,15 +129,18 @@ const videos = ref([
           :isIpad="video.isIPad"
           :isIphone="video.isIphone"
         />
-        <div class="info-container">
-          <h2>{{ video.title }}</h2>
-          <h3 v-html="formatDescription(video.description)"></h3>
-          <IconComponent
-            v-if="video.web !== 1"
-            class="icon"
-            :link="video.web"
-            icon="github-icon.svg"
-          />
+        <div class="info-container-box">
+          <div class="info-container">
+            <h2>{{ video.title }}</h2>
+            <h3 v-html="formatDescription(video.description)"></h3>
+            <div class="icon-container-git" v-if="video.web !== 1">
+              <IconComponent
+                class="icon icon-container"
+                :link="video.web"
+                icon="github-icon.svg"
+              />
+            </div>
+          </div>
 
           <a
             v-if="video.documentation"
@@ -156,34 +159,101 @@ const videos = ref([
 @import "../assets/scss/hero";
 @import "../assets/scss/block";
 
-.icon {
-  position: absolute;
-  left: 20px;
-  top: 20px;
+@media screen and (max-width: 768px) {
+  .info-container-box {
+    display: flex;
+    justify-content: center;
+  }
+  .info-container {
+    height: 200px;
+    width: 380px;
+    text-align: left;
+    align-items: center;
+    align-content: center;
+    display: flex;
+    flex-direction: column; /* Align items in columns */
+    background: #e2e2e6;
+    border-radius: 20px;
+    font-weight: bold;
+    box-shadow: 2px 4px 12px rgba(196, 195, 195, 0.609);
+    padding: 15px;
+    // margin-right: 30px;
+    border: 5px solid black;
+    margin-bottom: 10px;
+  }
+  .block--dark h3 {
+    color: #222222ba;
+    font-size: 10px;
+    font-weight: 600;
+  }
+  .block--dark h2 {
+    color: #000000c4;
+    margin-bottom: 15px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 4.5px;
+    margin-left: 10px;
+  }
+  .icon-container-git {
+    position: absolute;
+    left: 20px;
+    top: 10;
+  }
+
+  .icon-container {
+    width: 20px;
+    height: 20px;
+  }
+
+  .icon {
+    width: 20px;
+    height: 20px;
+  }
 }
 
 @media screen and (min-width: 768px) {
-  .block__header {
-    margin-top: 90px;
-    text-align: center;
-    margin-bottom: 4rem;
-  }
-
-  .block__heading {
-    display: flex;
+  .info-container {
+    height: 400px;
+    width: 960px;
+    text-align: left;
+    align-items: center;
     align-content: center;
-    align-self: center;
-    text-align: center;
-    margin: 0 auto;
+    display: flex;
+    flex-direction: column; /* Align items in columns */
+    background: #e2e2e6;
+    border-radius: 20px;
+    font-weight: bold;
+    box-shadow: 2px 4px 12px rgba(196, 195, 195, 0.609);
+    padding: 50px;
+    margin-right: 30px;
+    border: 5px solid black;
+    margin-bottom: 40px;
+  }
+
+  .block--dark h3 {
+    color: #222222ba;
+    font-size: 21px;
+    font-weight: 600;
+  }
+
+  .icon-container {
+    width: 30px;
+    height: 30px;
+  }
+
+  .block--dark h2 {
+    color: #000000c4;
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
+
+  .icon-container-git {
+    position: absolute;
+    left: 20px;
+    top: 55px;
   }
 }
 
-@media screen and (max-width: 768px) {
-  .block__header {
-    margin-top: 30px;
-    margin-bottom: 4rem;
-  }
-}
 .container {
   max-width: 1140px;
   margin: 0 auto;
@@ -191,37 +261,8 @@ const videos = ref([
   margin-top: 100px;
 }
 
-.info-container {
-  height: 400px;
-  width: 960px;
-  text-align: left;
-  align-items: center;
-  align-content: center;
-  display: flex;
-  flex-direction: column; /* Align items in columns */
-  background: #e2e2e6;
-  border-radius: 20px;
-  font-weight: bold;
-  box-shadow: 2px 4px 12px rgba(196, 195, 195, 0.609);
-  padding: 50px;
-  margin-right: 30px;
-  border: 5px solid black;
-  margin-bottom: 40px;
-}
-
 .info-container > h2 {
   text-align: center;
-}
-
-.block--dark h3 {
-  color: #222222ba;
-  font-size: 21px;
-  font-weight: 600;
-}
-.block--dark h2 {
-  color: #000000c4;
-  margin-bottom: 20px;
-  font-weight: 600;
 }
 
 .my-image {

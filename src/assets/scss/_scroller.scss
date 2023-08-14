@@ -1,5 +1,6 @@
 /* Scroll styles  */
-.media-scroller {
+@media screen and (min-width: 768px) {
+  .media-scroller {
     display: grid;
     grid-auto-flow: column;
     /* grid-auto-columns: 21%; */
@@ -79,3 +80,87 @@
   .snaps-inline > * {
     scroll-snap-align: start;
   }
+}
+
+
+  .media-scroller2 {
+    display: grid;
+    grid-auto-flow: column;
+    /* grid-auto-columns: 21%; */
+    padding: 0 var(--_spacer) var(--_spacer);
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    margin-left: 20px;
+    margin-top: 30px;
+  }
+  
+  .media-element2 {
+    display: grid;
+    margin: 20px;
+    grid-template-rows: min-content;
+    width: auto;
+    /* border: 1px solid rgba(255, 255, 255, 0.124);  */
+    border-radius: 20px;
+  }
+
+
+
+  .media-element--1x2-2 {
+    display: grid;
+    align-content: center;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 20px;
+    grid-template-rows: min-content;
+    width: auto;
+    /* border: 1px solid rgba(255, 255, 255, 0.124);  */
+    border-radius: 20px;
+  }
+  
+  .media-element2 > img {
+    inline-size: 100%;
+    height: 170px;
+    width: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+
+
+
+  .media-element2 > video {
+    inline-size: 100%;
+    height: auto;
+    width: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+  
+  .media-element--1x2-2 > video {
+    inline-size: 100%;
+    height: auto;
+    width: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+  
+  .snaps-inline-2 {
+    scroll-snap-type: inline mandatory;
+    scroll-padding-inline: var(--_spacer, 1rem);
+  }
+  
+  .snaps-inline-2 > * {
+    scroll-snap-align: start;
+  }
+

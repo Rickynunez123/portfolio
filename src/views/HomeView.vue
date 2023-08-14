@@ -37,14 +37,12 @@ onUnmounted(() => {
     <section class="block block--dark blocks">
       <header class="container grid grid grid--1x2">
         <div class="block__header hero__content">
-          <!-- <h1 class="block__heading">{{ titleTyped }}</h1> -->
           <h1 class="fancy">Hello.I am Ricardo</h1>
           <br />
           <div
             v-if="windowWidth >= 768"
             data-aos="fade-right"
-            data-aos-delay="3000"
-            data-aos-duration="2000"
+            data-aos-duration="1000"
           >
             <IconComponent
               link="https://github.com/Rickynunez123"
@@ -64,8 +62,7 @@ onUnmounted(() => {
           <div
             v-if="windowWidth <= 768"
             data-aos="fade-right"
-            data-aos-delay="3000"
-            data-aos-duration="2000"
+            data-aos-duration="1000"
           >
             <IconComponent
               link="https://github.com/Rickynunez123"
@@ -111,10 +108,15 @@ onUnmounted(() => {
   outline-offset: -10px;
   width: 300px;
 }
+
 .portrait-container {
   flex-direction: column;
   display: flex;
   align-items: center;
+}
+.icon-container {
+  width: 30px;
+  height: 30px;
 }
 
 @media screen and (min-width: 768px) {
@@ -131,6 +133,10 @@ onUnmounted(() => {
 
   .block__header {
     margin-bottom: 4rem;
+  }
+
+  h1 {
+    font-size: 6rem;
   }
 }
 

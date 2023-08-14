@@ -1,7 +1,7 @@
 <script setup>
 import { ref, onMounted } from "vue";
 import { animateText } from "../utils/TextAnimation"; // Update the path according to your folder structure
-import Scroller from "../components/ScrollerComponent.vue";
+import Scroller from "../components/ScrollerComponent2.vue";
 import photos from "../data/images.json";
 
 const text = ref(null);
@@ -59,11 +59,7 @@ onMounted(() => {
       <header class="block__header">
         <h2>Hobbies</h2>
       </header>
-      <div
-        data-aos="fade-up"
-        data-aos-duration="600"
-        class="media-scroller snaps-inline"
-      >
+      <div data-aos-duration="600" class="media-scroller2 snaps-inline-2">
         <Scroller
           v-for="photo in photos.hobbies"
           :key="photo.id"
@@ -71,28 +67,13 @@ onMounted(() => {
           :text="photo.text"
         ></Scroller>
       </div>
-      <!-- <header class="block__header">
-        <h2>Friends & Family</h2>
-      </header>
-      <div
-        data-aos="fade-up"
-        data-aos-duration="600"
-        class="media-scroller snaps-inline"
-      >
-        <Scroller
-          v-for="photo in photos.friends"
-          :key="photo.id"
-          :photos="photo.path"
-        ></Scroller>
-      </div> -->
       <header class="block__header">
         <h2>Places</h2>
       </header>
       <div
         style="padding-bottom: 80px"
-        data-aos="fade-up"
         data-aos-duration="600"
-        class="media-scroller snaps-inline"
+        class="media-scroller2 snaps-inline-2"
       >
         <Scroller
           v-for="photo in photos.places"
@@ -111,25 +92,20 @@ onMounted(() => {
 @import "../assets/scss/block";
 
 @media screen and (min-width: 768px) {
-  .block__header {
-    margin-top: 90px;
-    text-align: center;
-    margin-bottom: 4rem;
-  }
-
-  .block__heading {
-    display: flex;
-    align-content: center;
-    align-self: center;
-    text-align: center;
-    margin: 0 auto;
-  }
 }
 
 @media screen and (max-width: 768px) {
-  .block__header {
-    margin-top: 30px;
-    margin-bottom: 4rem;
+  h1 {
+    font-size: 5rem;
+  }
+  p {
+    font-size: 1.5rem;
+  }
+  .hero__tagline {
+    display: flex;
+    flex-direction: column; /* Align paragraphs in a single column */
+    align-items: center; /* Center content horizontally */
+    text-align: center; /* Center text within paragraphs */
   }
 }
 .container {

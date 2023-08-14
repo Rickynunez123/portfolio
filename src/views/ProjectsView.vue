@@ -6,6 +6,7 @@ import IconComponent from "@/components/IconComponent.vue";
 const text = ref(null);
 const strText = ref(null);
 let splitText = ref([]);
+const screenWidth = ref(window.innerWidth); // Get initial screen width
 
 onMounted(() => {
   text.value = document.querySelector(".fancy");
@@ -15,12 +16,16 @@ onMounted(() => {
 
   animateText(text.value, strText.value, splitText.value);
 });
+
+window.addEventListener("resize", () => {
+  screenWidth.value = window.innerWidth;
+});
 </script>
 
 <template>
   <div>
     <section class="block block--dark">
-      <header class="container grid grid">
+      <header class="container grid">
         <div class="block__header hero__content">
           <h1 class="fancy block__heading">Projects</h1>
         </div>
@@ -62,18 +67,28 @@ onMounted(() => {
             link="https://github.com/Rickynunez123/SchoolPortal"
             icon="github-icon.svg"
           />
-          <a
-            href="https://github.com/Rickynunez123/SchoolPortal"
-            target="_blank"
-            >School Portal -></a
-          >
-          <a
-            style="margin-left: 10px"
-            :href="`https://vwwbxanexhmfobvhltut.supabase.co/storage/v1/object/public/documents/SchoolPortal.pdf`"
-            target="_blank"
-            >Click to see documentation</a
-          >
+          <div v-if="screenWidth > 768">
+            <a
+              href="https://github.com/Rickynunez123/SchoolPortal"
+              target="_blank"
+              >School Portal -></a
+            >
+            <a
+              style="margin-left: 10px"
+              :href="`https://vwwbxanexhmfobvhltut.supabase.co/storage/v1/object/public/documents/SchoolPortal.pdf`"
+              target="_blank"
+              >Click to see documentation</a
+            >
+          </div>
+          <div v-else>
+            <a
+              href="https://github.com/Rickynunez123/SchoolPortal"
+              target="_blank"
+              >School Portal</a
+            >
+          </div>
         </div>
+
         <div class="text-container">
           <IconComponent
             link="https://github.com/Rickynunez123/Web-Browser"
@@ -105,41 +120,37 @@ onMounted(() => {
 @import "../assets/scss/block";
 
 @media screen and (min-width: 768px) {
-  .block__header {
-    margin-top: 90px;
-    text-align: center;
-    margin-bottom: 4rem;
-  }
-
-  .block__heading {
+  .text-container {
     display: flex;
-    align-content: center;
-    align-self: center;
-    text-align: center;
-    margin: 0 auto;
+    flex-direction: row;
+    align-items: center;
+    width: 1000px;
+    height: 40px;
+    margin: 10px;
   }
-}
 
-.text-container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  width: 1000px;
-  height: 40px;
-  margin: 10px;
+  .container {
+    max-width: 1140px;
+    margin: 0 auto;
+    margin-bottom: 100px;
+    margin-top: 100px;
+  }
 }
 
 @media screen and (max-width: 768px) {
-  .block__header {
-    margin-top: 30px;
-    margin-bottom: 4rem;
+  .text-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 30px;
+    margin: 10px;
   }
-}
-.container {
-  max-width: 1140px;
-  margin: 0 auto;
-  margin-bottom: 100px;
-  margin-top: 100px;
+
+  .container {
+    margin: 0 auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
 }
 
 .info-container {

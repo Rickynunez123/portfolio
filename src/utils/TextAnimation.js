@@ -34,5 +34,5 @@ export function animateText(text, strText, splitText) {
       }
     }
   
-    let timer = setInterval(onTick, 200);
+    let timer = setInterval(onTick, 140);
   }

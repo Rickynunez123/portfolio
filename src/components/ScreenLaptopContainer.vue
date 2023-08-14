@@ -42,43 +42,86 @@ const props = defineProps(["video", "isWeb", "isIpad", "isIphone"]);
 </template>
 
 <style scoped>
-.laptop-size {
-  height: 760px;
-  position: relative;
+@media screen and (max-width: 768px) {
+  .laptop-size {
+    height: 300px;
+    position: relative;
+  }
+
+  .phone-size {
+    height: 200px;
+    position: relative;
+  }
+
+  .ipad-size {
+    margin-right: 220px;
+    padding-right: -150px;
+    padding-left: 220px;
+    height: 200px;
+    position: relative;
+  }
+
+  .video-size {
+    height: 150px;
+    margin-bottom: 20px;
+    position: absolute;
+  }
+
+  .video-size-phone {
+    height: 140px;
+    position: absolute;
+  }
+
+  .laptop-container {
+    display: flex;
+    width: 100%;
+    min-width: auto;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+  }
 }
 
-.phone-size {
-  height: 450px;
-  position: relative;
-}
+@media screen and (min-width: 768px) {
+  .laptop-size {
+    height: 760px;
+    position: relative;
+  }
 
-.ipad-size {
-  margin-right: 220px;
-  padding-right: -150px;
-  padding-left: 220px;
-  margin-bottom: 50px;
-  height: 450px;
-  position: relative;
-}
+  .phone-size {
+    height: 450px;
+    position: relative;
+  }
 
-.video-size {
-  height: 400px;
-  margin-bottom: 50px;
-  position: absolute;
-}
+  .ipad-size {
+    margin-right: 220px;
+    padding-right: -150px;
+    padding-left: 220px;
+    margin-bottom: 50px;
+    height: 450px;
+    position: relative;
+  }
 
-.video-size-phone {
-  height: 340px;
-  position: absolute;
-}
+  .video-size {
+    height: 400px;
+    margin-bottom: 50px;
+    position: absolute;
+  }
 
-.laptop-container {
-  display: flex;
-  width: 100%;
-  min-width: auto;
-  justify-content: center;
-  justify-items: center;
-  align-items: center;
-  align-content: center;
+  .video-size-phone {
+    height: 340px;
+    position: absolute;
+  }
+
+  .laptop-container {
+    display: flex;
+    width: 100%;
+    min-width: auto;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+  }
 }
 </style>
