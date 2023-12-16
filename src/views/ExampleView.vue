@@ -91,7 +91,7 @@ const videos = ref([
     link: "speedpitch.mp4",
     web: 1,
     description:
-      "speedpitch.mp4 <br> <br>" +
+      "The user will pitch a ball and with a speed gun the velocity of the ball will be detected, it has 3 chances. Only the highest score of those 3 pitches will be considered and it will be added to a leaderboard <br> <br>" +
       "● Front-end (Vue, JavaScrips, SCSS, HTML)<br>" +
       "● Back-end (MySQL, Express, Sockets, Axios)",
   },
